@@ -60,6 +60,7 @@ class card extends HTMLElement {
             <div class="card-text"> ${this.name()}</div>
             <div class="card-image"></div>
             <div class="card-text"> ${this.turma()}</div>
+            <div class="card-text"> ${this.status()}</div>
         `
     
         return card
@@ -85,7 +86,14 @@ class card extends HTMLElement {
 
     turma(){
         const turma = this.getAttribute('data-bgturma')?? "ds2t"
+        
         return turma
+    }
+
+    status(){
+        const statusAluno = this.getAttribute('data-bgstatus')?? "situação"
+
+        return statusAluno
     }
 }
 
